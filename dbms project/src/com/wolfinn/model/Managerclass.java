@@ -137,18 +137,12 @@ public class Managerclass {
 				Scanner scanner = new Scanner(System.in);
 
 				System.out.println("Enter the Start Date in 12/3/2018 format = month/day/year");
-				//String date = scanner.next();
-				//java.util.Date dateFormat = new java.util.Date("dd/mm/yyyy");
-				//Date start_date=null, end_date=null;
 				java.util.Date start_date = new java.util.Date(scanner.next());		// might throw exception of parsing date to string
-				    java.sql.Date sql_start_Date = new java.sql.Date(start_date.getTime());
+				java.sql.Date sql_start_Date = new java.sql.Date(start_date.getTime());
 				System.out.println(start_date+"is start date");
 				System.out.println("Enter the End Date in 4/2/2018 format -> month/date/year");
-//				scanner.next();
-				java.util.Date end_date = new java.util.Date(scanner.next());	 
-						//(Date) dateFormat.parse(date);		// might throw exception of parsing date to string
-					java.sql.Date sql_end_Date = new java.sql.Date(end_date.getTime());
-
+				java.util.Date end_date = new java.util.Date(scanner.next());	
+				java.sql.Date sql_end_Date = new java.sql.Date(end_date.getTime());
 				System.out.println(end_date+" is end date"+"sql end date is "+sql_end_Date);
 				rh.report3(sql_start_Date, sql_end_Date);
 			} catch (Exception e) {
@@ -187,27 +181,13 @@ public class Managerclass {
 				Scanner scanner = new Scanner(System.in);
 				
 				System.out.println("Enter the Start Date in 12/3/2018 format = month/day/year");
-				//String date = scanner.next();
-				//java.util.Date dateFormat = new java.util.Date("dd/mm/yyyy");
-				//Date start_date=null, end_date=null;
 				java.util.Date start_date = new java.util.Date(scanner.next());		// might throw exception of parsing date to string
 				    java.sql.Date sql_start_Date = new java.sql.Date(start_date.getTime());
 				System.out.println(start_date+"is start date");
 				System.out.println("Enter the End Date in 4/2/2018 format -> month/date/year");
-//				scanner.next();
 				java.util.Date end_date = new java.util.Date(scanner.next());	 
-						//(Date) dateFormat.parse(date);		// might throw exception of parsing date to string
-					java.sql.Date sql_end_Date = new java.sql.Date(end_date.getTime());
-
-				System.out.println(end_date+" is end date"+"sql end date is "+sql_end_Date);
-				//String date = scanner.next();
-				//SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-				//Date start_date=null, end_date=null;
-				//System.out.println("Enter the Start Date in 10-mar-2018 format");
-				  //  start_date = (Date) dateFormat.parse(date);		// might throw exception of parsing date to string
-				//System.out.println("Enter the End Date in 10-mar-2018 format");
-					//end_date = (Date) dateFormat.parse(date);		// might throw exception of parsing date to string
-					
+				java.sql.Date sql_end_Date = new java.sql.Date(end_date.getTime());
+				System.out.println(end_date+" is end date"+"sql end date is "+sql_end_Date);	
 				rh.report7(sql_start_Date, sql_end_Date, hotelId);
 			} catch (Exception e) {
 				e.printStackTrace();
